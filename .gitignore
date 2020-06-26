@@ -1,0 +1,7 @@
+.idea/
+*.iml
+target/
+src/main/resources/supervised_model.bin
+src/main/resources/supervised_model.vec
+src/main/resources/resources.zip
+README

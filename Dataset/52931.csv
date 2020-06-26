@@ -1,0 +1,185 @@
+ProjectId,ProjectName,Title,Description,Role
+52931,Distll,Home Feed,"Cronological feed.For the onboarding, the current partner app determines content in the home feed (sources, topics and categories).",Product Owner
+52931,Distll,Purchase Flow - Product Variants: Stop Showing Variants with only one option,,iOS Developer
+52931,Distll,Add the ability to upload multiple medias for sources,"Sources should be able to hold a set of up to 5 pictures each. There will be an interface on the AdminUI for this upload, that will allow Distll to add images of at least a size and resolution and in a given series of formats.Given the Source add pageWhen  the user hovers over the placeholders to upload the imagesThen  a text appears informing that only jpeg and png images of at least 900*600 are acceptedGiven the Source add pageWhen  the user tries to upload an image that's not of the acepted formatsThen  it's warned that the image is not of the acepted size or formatand   the image is rejected",Backend Developer
+52931,Distll,Sprint 23 bugs,,iOS Developer
+52931,Distll,Optimize home feed and discover section response time,,Backend Developer
+52931,Distll,[ADMIN-UI] Renew source credential,"Admin user should  be able to renew global credentials when expired or not initialized .For now, this only applies for **instagram**.**Preconditions**:-Admin user should be logged in with instagram account (the one that manages global instagram app).-Instagram app should be configured [this way](https://docs.google.com/a/fdvsolutions.com/document/d/1It6j4a2QicbbfAeC-2IrqeI_Wwa1BPRMhanbo1_gbnQ/edit?usp=sharing ""instagram config"")-When renewing credential admin user will be redirected to instagram autorization page and will have to authorize this request. Screen will look like [this](https://drive.google.com/a/fdvsolutions.com/file/d/0B3SMgi60fwDkSk9EMXV6VTFZMlk/view?usp=sharing """")**Development details:**-Credentials have new attribute called ""expired"" to know if we need to renew credential or not-Credentials will have ""renew_url"" property under data field so renew button will need to redirect to that url replacing redirect_uri parameter with corresponding one and adding source_type_id attribute-[Instagram documentation](https://www.instagram.com/developer/authentication/ """")-If there was no problem renewing credential, user should see a green message saying for example ""Instagram credentials successfully updated"". If there was an error, you will receive ""error"" parameter under url, and also, ""error_description"". So we should show a red message saying ""There was an error trying to renew Instagram credential. Error details: <error_description>""**Test cases**:https://docs.google.com/a/fdvsolutions.com/document/d/1ZJb4r3NkcHM49hMDF0KPi8E52A4UMYfHs-l09JIyQo4/edit?usp=sharing",Backend Developer
+52931,Distll,IOS - Sprint 24 Bugs Part 1,,iOS Developer
+52931,Distll,Sprint 24 bugs Backend + Admin UI,,Backend Developer
+52931,Distll,Make a switch to transite from a Distll Admin to a Brand Admin,The goal of this US is implement the transition to a Brand Admin before implementing any Brand specific feature,Backend Developer
+52931,Distll,Create PreProduction environment,As part of this item we have:* setup servers* setup de deployment pipeline* setup autoscaling,Backend Developer
+52931,Distll,Beautiful Losers - Only Twitter content is seen by default,I think this is happening because of how everything was injested. Probably we will need to give random upload dates to articles to make them apear randomly,Backend Developer
+52931,Distll,Image Loading times are Very Slow,"The traffic is very slow. Image take a lot of time to load. We suppose that is because the servers are on Argentina. We can think on some cache strategies.The app is very image heavy, If i remember correctly the complaint here was mostly about the images and not so much about the connection. On the front end, we can't do much about the response time of the json load if the servers are in Argentina. We need to make AWS replicas here in the US.With regard to a suggested solution for fixing images, we should use SGImageCache. SeatGeek is a highly respected (and image heavy) ticketing app in the US. Using their library could greatly improve perceived image loading times in tables. I used this library in a previous project and it worked very well.https://github.com/seatgeek/SGImageCacheHowever, Taka brought up a great point that most of our images sizes are too big for a fast iterative view.We need to pair down the image size to be more reasonable for download. That is we need transcoding to be effective for images that go into s3 and our attached to the Distll API.  To start I suggest we use images of size 640x640. Further down the line we might want to able to select the image size using a parameter, per device, like size=640x640.  Many image apis do the same including the facebook places api.Besides Image Caching and transcoding the images, we can also prefetch more cells in the background, and also reduce like the parallax effect and stretching images by 30% since they'll be coming in smaller than some device sizes might want for full width of the device.",iOS Developer
+52931,Distll,Apple Submit For Review of Beautiful Losers,We need to prepare the app for Apple's submission and push it to testflight so apple can give us feedback if needed,iOS Developer
+52931,Distll,List Products for a partner,Make a new menu entry to show a partner's existing products. Designs and extra info can be found [here](https://docs.google.com/document/d/1tIAcKGPeTsH9uukWDCghyHSlteOECdhrmg5Q9JG01GI/edit#),Backend Developer
+52931,Distll,Modify back button behavior,"After making any edition on the AdminUI, take the user to the page where it came from",Backend Developer
+52931,Distll,Improve metrics and analytics,"We need to measure the following metrics:- Time per session (done):    Difference between the time the app opens and the app closes- Number of sessions per user (done):    Number of times the app usage timer starts for each user- Number of page views (done):    Number of backend requests for new articles- Number of purchases (done):- % of conversion per user (done):    Number of items the users opens the app/the number of items bought- % of conversion per session by user:    Number of items the users opens the app/the number of items bought in a single session- % of conversion when user views a product by user (done):    Number of times the users sees/the number of items it bought anything- % of conversion when user views a product by product (done):    Number of times a product is seen/the number of items it's bought- Monthly active users (MAU)(done)- Daily active users (DAU)(done)- Daily actives /monthly actives (done)- product views after a product sells out (done)    Number of times a product is seen before it's stock falls to 0.More info and test cases [here](https://drive.google.com/open?id=0By08T7FvFFuIWEdkSjBhOGpkR28 ""here"")MixPanel integration docs [here](https://docs.google.com/document/d/1ue4faWGKxheZK9MLzYkT78t1Cs0icWsRW53hRItwaWQ/edit?usp=sharing ""here"")",iOS Developer
+52931,Distll,IOS - Article image dissapears after entering the view,"The transition animation works well, but the full resolution image is not displayed. It's happened with sources ""Athletic Recon - RSS"" and ""Chet Faker - SoundCloud"".",iOS Developer
+52931,Distll,Home feed UI improvements,"- ""DISTLL"" at the top should be in Helvetica Neue Bold font- Display a little ""source"" logo to the right of the source name. E.g. ""Pitchfork - Facebook"" should be ""Pitchfork <fb logo>"", etc.- Change message during pull to refresh, from ""Pull Down To Refresh"" to ""Release To Refresh""- Improve article titles following Christian's guidelines:  > You’ll notice that the font size of the titles in the Distll demo are much larger than what we have currently in the app. However those are shorter titles in the demo. In the Pharrell demo there are longer article titles and the size of the font is smaller than in the Distll demo, although both appear larger than what we currently have. Can someone verify (or not) if the font size in the Pharrell demo is larger than what we’re using in the actual app?  > In the Pharrell demo, the titles are longer and take up much more room than what we currently allow. They are spaced away from the color blocks on the right but run taller up the image….more vertically. I actually like that and wonder if we should maybe allow 4 lines of text and buffer them away from the color blocks like in the Pharrell demo. I’d like to see what that looks like. For extremely long titles, twitter and ig posts, etc, we should still use the … and truncate the title- Tweak the parallax effect with Christian (he can't even detect it)",iOS Developer
+52931,Distll,Tech Debt,,Backend Developer
+52931,Distll,Measure Ingestion process time,Realizar algunas mediciones del ingestion engine para asegurarnos que la estructura actual provee un refresco en menos de 3 horas.,Backend Developer
+52931,Distll,Deprecate sections,"Sections are a feature we no longer want. We need to add brand dependent pictures and color to categories, modify the CRUD so brands can add o remove categories instead of sections, and modify the queries to provide de former sections articles.",Backend Developer
+52931,Distll,Login W/ Facebook,"We need to provide the possibility for a user to login via facebook. The authentication should be done on the iOS app, and then the credentials should be send to the backend as regular signup. The docuemntation for the Facebook login is [here](https://developers.facebook.com/docs/facebook-login/ios)",iOS Developer
+52931,Distll,Database backups and improved startup,"In case either a system error or a human error happens, we need to setup a backup system for recovery. That backup system will be used as a new and improved startup system, to setup the brand id's for production servers, and it will aid continuous delivery, by dividing the data between content and proper app setup data that could be setup on the app's creation process. Also, we could consider moving move to an RDS service instead of hosting our own instance of postgres.",Backend Developer
+52931,Distll,Load/Stress tests optimizations,"- Load tests and optimization. Improve JMeter test suite to reflect ""real"" users behaviour",Backend Developer
+52931,Distll,Delete topics from the Distll admin panel,"We need to implement topics delete functionality in the AdminUI for Distll. Another US will cover Partners in the future, but the full functionality is described [here](https://docs.google.com/document/d/10b2sWgurgzkb4dC4-EdN9sC_4SYpq57_uOyOKC2KAfo/edit#)PR: https://github.com/distll/admin-backoffice/pull/143",Backend Developer
+52931,Distll,Fix Instagram ingestion,[Distll] Configure BL account to repost content[Us] Add BL as a sandbox user[Both] Record a video to show the app usage[Both] Describe Instagram Use Case we apply for.[Both] Update ToC,Backend Developer
+52931,Distll,Change the transition when exiting the product view,When you tap into an item and then want to go back and out of that view….when you hit the back arrow at the top it then reloads the carousel screen. I think a nicer transition or animation would be to just simply zoom back out….essentially the opposite effect of zooming into the product.,iOS Developer
+52931,Distll,[iOS] Misc fixes,"Misc, small, fixes for the iOS app",iOS Developer
+52931,Distll,[BUG] Fix crash due to topics delete,"Filters that get deleted because of a topic deletion can't be deleted from the ingestion cache, or pending process, and they make some filtering tasks crash",Backend Developer
+52931,Distll,Home feed tweaks,"See the attached document for the needed changes, and use the attached arrow as replacement of the current one",iOS Developer
+52931,Distll,Set final section images for Distll and BL apps,"Get new images for the sections, create an admin-backoffice endpoint to update section images, and a script to upload the images.",Backend Developer
+52931,Distll,[BUG] [ADMIN-UI] There is a mismatch between the categories shown in the source preview and the ones in the edit page,,Backend Developer
+52931,Distll,Make the spining wheel always visible when using pull to refresh,,iOS Developer
+52931,Distll,[ADMIN-UI] Products pagination && search functionality,,Backend Developer
+52931,Distll,Fix sources names,"Ask Christian if he wants to change the sources names, and which ones are going to be the new ones, replace them on the init scripts, and re run them so they are shown on the app.Christian said:Style Guide for Source names:a.) RSS and other native sources from websites proper should just be listed as: Pitchfork (not as Pitchfork RSS)b.) Facebook sources should be displayed as their proper Facebook name (as they’re listed on Facebook itself) with a white little facebook logo to the right of it. So, it would be: Pitchfork (fb logo in white)c.) Twitter sources should be displayed as their handle followed by the Twitter bird logo in white to the right. Ex: @pitchfork (all white bird logo)d.) Instagram should be displayed the same,….handle name and then IG logo in all white. @pitchfork (logo)e.) YouTube sources should be handled the same as Facebook sources….. sources should be displayed as their proper YouTube name (as they’re listed on YouTube itself) with a white little YT logo to the right of it. So, it would be: Pitchfork (YT logo in white)",Backend Developer
+52931,Distll,Set custom profile pictures for sources without it (or lo-res),"Get new images for the sources, create an admin-backoffice endpoint to update source pictures, and a script to upload the images.",Backend Developer
+52931,Distll,Forgot My Password Screen,"The flow for password will require you to enter an already registered email, and then it will require you to enter a 6 digit number that was sent via email. That 6 digit number should be an alphanumeric code, generated randomly, and valid for recovering the user's password during a 24hs period. After that step, the user should enter a new password, and then redirected to the login screen. The design for the screens is [here](https://trello.com/c/qITLnjdp/8-forgot-your-password-flow) and all errors should be shown with the [this](https://trello.com/c/k9Y9dOwq/11-design-a-non-blocking-error-notification-for-the-login-screen) designTest cases are [here](https://docs.google.com/spreadsheets/d/1rqkUs0S0CemgfMFAVcDEhKoBXB1EhXe5ZRLi3R7vwAU/edit#gid=226294028)",iOS Developer
+52931,Distll,User deactivation,"We need to provide the user the ability do deactivate it's account. This would be implemented as an option in the settings menu, that will trigger a popup asking for confirmation before posting to the backend the deactivation.In the backend, the deactivation of a user would mean that all presence and all of a user's interactions with the platform will be hidden from other users, and that a login to the platform from a deactivated user would revert it's status.Details and test cases for backend can be found [here](https://docs.google.com/document/d/1NTcqdjsOY_-Shxr85vJfOtX_ofmDWn7posFWf8p9gwc/edit)Details and test cases for ios can be found [here](https://docs.google.com/document/d/1A3R59Zx-ZMh3WnfLx5wRYZ5OUgvdibQhRVDESN03NQA/edit)",iOS Developer
+52931,Distll,Improve analitics,We need to track the following metrics in mixpanel:,iOS Developer
+52931,Distll,Change the home feed banner to an image,"It will not be a text any more, but an image provided by the brand. Attached are the images for Pharrell and BL, Distill will come in the near future.",iOS Developer
+52931,Distll,Assign Products to Sources,,Backend Developer
+52931,Distll,New layout for the product images,"We need to define the image scaling in the products carousel, container style, animation to the full product view, and the scaling in the full product view.",iOS Developer
+52931,Distll,Bug? Category in topic with no threshold override displays a 0,https://github.com/distll/admin-backoffice/pull/51,Backend Developer
+52931,Distll,Continuous Integration Improvements,- Run tests for each module on a separate job triggered on every push to develop branch.- Deploy each module separately to FDV environment after successful test run- Run integration/regression tests on the deployed environment,Backend Developer
+52931,Distll,iOS - Sprint 24 Bugs part 2,,iOS Developer
+52931,Distll,Reload app's content when it loses focus,"When returning to the app, it should always refresh it's content",iOS Developer
+52931,Distll,Quantity-change buttons should look disabled during requests,"Once a request starts, they are disabled but there's no visual cue. We should simply use the same color that's there for the ""minus"" sign when quantity is 1.",iOS Developer
+52931,Distll,Brand management,,Backend Developer
+52931,Distll,"Terms and Conditions, Privacy Policy",,iOS Developer
+52931,Distll,Fix right orientation failing to comply on video playback,when user tries to rotate the device to the right during video playback the app does not successfully do it.,iOS Developer
+52931,Distll,BE - Ingestion Engine - Distll and Beautiful Loosers -  Some articles are duplicated in Home Feed and Discover Feed,Steps1) Open the app2) Navegate in articles list or discover feed3) Slide for See more articles,Backend Developer
+52931,Distll,Some articles don't have pub_date,"Sources from Spotify and Twitter seem to do this.The fix can be twofold:- Mobile: display ""created_at"" if no ""pub_date""- Back end: make sure we're getting pub_date correctly",Backend Developer
+52931,Distll,Some articles have HTML tags in the title,,Backend Developer
+52931,Distll,Align the back icon in the article view,"The icon is too low on the screen and height wise should sit squarely in the middle of the shopping icon. if you drew a midpoint in the top shopping icon and carried it out to the left, the midpoint line should also hit the back arrow perfectly in the middle.",iOS Developer
+52931,Distll,Fix no result label hiding when updating a null array of data on feed screen.,"when the user makes a successful pull to refresh on Feed screen. If the result is a list of  empty articles the ""no results label"" was appearing overlapping the already set of articles on screen.",iOS Developer
+52931,Distll,IOS - Add publication date to article view,"- We need to add the publication date to article- Ask DTE where and how are we gonna to show this in the article view.- Add the parameter in the DistllAPI (mobile side) and integrate it into the app.From @christianstrike in Slack:""The font family we are using is Helvetica Neue. The title of the article should be Helv Neue Bold in ALL CAPS. I just realized that we arent doing this with the current product. I cant remember if we discussed this and made a decision to make the title NOT in all capital letters, but I do prefer the way the ALL CAPS looks in the title and would like to see what that looks like in the next version of the build.The #Source credit should sit right under the title as designed. (in this case High Snobiety)on the second image, we show the tagged #Topics for this article in the grey bubbles at top. The date of the article should be right under the author's name in the same font/treatment as the author's name,.....in this case John Stevens. I do NOT think the author's name should be in ALL CAPS however. Lets change that. All of this text is also Helvetica Neue. (edited)""",iOS Developer
+52931,Distll,(1p) Setup categories to match invision,,Backend Developer
+52931,Distll,(4) [4]{Spike} Research Vimeo iOS SDK,,iOS Developer
+52931,Distll,(1) [1] Update media model,,iOS Developer
+52931,Distll,(6) [6] Video player for vimeo content,,iOS Developer
+52931,Distll,(2) Create ansible play to populate db with testing data,,Backend Developer
+52931,Distll,(1) [8] Create ansible play to run DB migrations,,Backend Developer
+52931,Distll,(3) Create EC2 VPS and AMI template,,Product Owner
+52931,Distll,(4) [4]{Spike} Research SoundCloud iOS SDK,,iOS Developer
+52931,Distll,(3) [4] Implement SoundCloud Player,,iOS Developer
+52931,Distll,(1) [2]Follow SoundCloud links in web view if app not installed,"We'll use the same web view as for other content, for consistency's sake.",iOS Developer
+52931,Distll,(2p) Research a nice way to show errors on the app from the design team,,Product Owner
+52931,Distll,(3) General - Wrong Message with/without WI FI,Need to add the right message with / without WiFi. What is the right message?,iOS Developer
+52931,Distll,(4)[4] Display error messages properly depending on API status code,What are the error messages to be display based on the API Status code?,iOS Developer
+52931,Distll,(1p) Catch all unhandled exceptions in API layer,,Product Owner
+52931,Distll,(1) Save main link for YouTube articles,,Backend Developer
+52931,Distll,(1) Save main link for Facebook articles,,Backend Developer
+52931,Distll,(1) Save main link for Twitter articles,,Backend Developer
+52931,Distll,(1) Save main link for Instagram articles,,Backend Developer
+52931,Distll,(2) [3] Facebook Login Task is running each time a facebook task is created,,Backend Developer
+52931,Distll,Define how existing address will be shown,,Product Owner
+52931,Distll,Determine minimum resolution restrictions for pictures.,,Product Owner
+52931,Distll,Determine minimum resolution restrictions for video.,,Product Owner
+52931,Distll,(2) [1] Define and enforce branching model for iOS repos.,,iOS Developer
+52931,Distll,(1) [1] Layout fixes,Name should have smaller line separation.,iOS Developer
+52931,Distll,(8) [12] Service endpoint to get all topics for a branding,,Backend Developer
+52931,Distll,(6) [6] Update model to new Vimeo article,,iOS Developer
+52931,Distll,(2p)[10] Filter home feed to retrieve articles with products,,Backend Developer
+52931,Distll,[12] (6) Product gallery,,iOS Developer
+52931,Distll,(3) [8] Product details view layout,,iOS Developer
+52931,Distll,(2) [4] Product details text scroll,,iOS Developer
+52931,Distll,(4) [2] Product details blur effect,,iOS Developer
+52931,Distll,(1) [8] Gallery to product details transition animation,,iOS Developer
+52931,Distll,(3) [1] Find out if we can fix this on the front end,This article contains example of Unicode Characters that don't print well. I need to find out what the default font of UIWebView is since we seem to be using that. I suspect it's some kind of Helvetica but this might have changed with iOS9.Example: html5.fdvs.com.ar/distll-/articles/4204,iOS Developer
+52931,Distll,(1) [2] Add entry point for purchase flow from product gallery.,For now we are gonna strip the arrow  colapse uncolapse button until is clarified by TDE.,iOS Developer
+52931,Distll,(4) [6]Option wizard step layout,- show one option at the time- the first time user enter into the wizard we will shoe all the available options collapsed.- the chevron arrow is for collapsing /expanding options. When an option is expand it occupies all the screen and the other options get hidden from the wizard.-,iOS Developer
+52931,Distll,"Define what to do about the ""up"" arrow on the top right","Talk with ben about what this ""up"" arrow does!! Plz write more about that in TechDev",iOS Developer
+52931,Distll,(5) Set up AngularJS app,,Backend Developer
+52931,Distll,(8) Set up Admin UI API server with Flask,,Backend Developer
+52931,Distll,(3) Add build and deployment roles for admin-backoffice to ansible,,Backend Developer
+52931,Distll,Update all back end READMEs,,Backend Developer
+52931,Distll,() [6] Update partner model,,Backend Developer
+52931,Distll,() [26] Admin API endpoint to add a partner account,,Backend Developer
+52931,Distll,() [14] Admin API endpoint to create a brand,,Backend Developer
+52931,Distll,(2) [6] Admin API authentication endpoint,,Backend Developer
+52931,Distll,(5) [10] Admin API authentication filter,,Backend Developer
+52931,Distll,(1) Admin API logout endpoint (DELETE /session?),,Backend Developer
+52931,Distll,(3) Admin UI login form,,Backend Developer
+52931,Distll,(1) AngularJS HTTP interceptor to redirect to login when not authenticated,,Backend Developer
+52931,Distll,(12) [6] Audio feed,"There will be a distinct feed item cell for playlists and tracks.We need new article type icons for them, and criteria to select a poster picture for the item. We need to define a main ""sharing"" link.We'll use the name of the playlist as the article title.For tracks we can use the album picture.TBD for playlists.",iOS Developer
+52931,Distll,(3) Refactor DB init scripts,There is a lot of repetition in the scripts. They could also use data input (CSV or JSON) to make it easier to reuse when creating new apps.,Backend Developer
+52931,Distll,[3] Backend Freeze and Deploy,,Backend Developer
+52931,Distll,(3) Create Ansible play to run distll-api-backend,,Backend Developer
+52931,Distll,(1h) Create transaction model,Agree with back end on the data they need to create the order and the payment for it.,iOS Developer
+52931,Distll,Find out the design of the UI,,Product Owner
+52931,Distll,(2) [13] Create ansible role to run ecommerce,,Backend Developer
+52931,Distll,Testing FDV Deploy,"Deploy to FDV testing team,-Add data for testing the user stories that are done-Stabilice the server",iOS Developer
+52931,Distll,(8) [8] Colapse and expand an purchase flow steps animated.,- animate an option from colapse mode into full screen mode (and viceversa). According to the video and to make this the simplest possible as we discuss in planning meeting. We are gonna just go with a fade in to that step of the purchase and make the user re select all the options from that point.- animate arrow rotation when colapse and expand happen (rotate animated 180 degrees).,iOS Developer
+52931,Distll,(4h) (CNR)Discover feed doesn't replace cells correctly on transition.,,iOS Developer
+52931,Distll,(0.5h) Video player (Vimeo & YouTube) doesn't auto-play.,,iOS Developer
+52931,Distll,(1h) SoundCloud playback is not working.,,iOS Developer
+52931,Distll,(1h) Product Gallery can't be navigated to from Home Feed.,,iOS Developer
+52931,Distll,(1h) [0.5] Pagination in Product Gallery lack arrow images.,,iOS Developer
+52931,Distll,(2h) [3] Product Gallery lacks back end service integration (with filter for demo).,,iOS Developer
+52931,Distll,"(0.5h) Overlay ""Play"" button has a text legend.",,iOS Developer
+52931,Distll,(4h) Gradient background in Product Detail has to be opaque at the bottom.,,iOS Developer
+52931,Distll,(0.5) Can't back off YouTube player when playback fails.,,iOS Developer
+52931,Distll,(1h) Back end: update hardcoded ID for User Profile.,,Backend Developer
+52931,Distll,(4h) [4h] Back end: assingn products to articles.,,Backend Developer
+52931,Distll,(2h) Back end: deploy admin-backoffice to development environment.,,Backend Developer
+52931,Distll,(2h) Analysis: determine what price to display for products (variants have prices).,,Product Owner
+52931,Distll,(12) Define purchase flow,,Product Owner
+52931,Distll,"[6] (1p) Implement logic for ""has_available_products"" flag",UNder home feed/sections scripts,Backend Developer
+52931,Distll,(1p) [2] Normalize product's body_html,,Backend Developer
+52931,Distll,(5p) [9] Create utils for common code (example: normalization method under ingestion),,Backend Developer
+52931,Distll,(2) [2] Sync with back end if we need some change in the actual json retrieved for this wizard,,iOS Developer
+52931,Distll,(6) [8] Implement json parsing into a widget option.,,iOS Developer
+52931,Distll,(4) [4] Design validator for the options variations,,iOS Developer
+52931,Distll,(2) [5h] Create UserShippingAddress models and relate it with the User,,Backend Developer
+52931,Distll,(2) [9h] Create endpoint on ecommerce module to save a shipping address for the current user,,Backend Developer
+52931,Distll,(1) Ensure that just the current user can get or save shipping addresses,,Backend Developer
+52931,Distll,(2) Create endpoint on node api to save shipping address for the current user,,Backend Developer
+52931,Distll,(1) Create endpoint on node api to retrieve all shipping addresses for the current user,,Backend Developer
+52931,Distll,(2) [2] <Spike> research and investigate how we are going to implement the auto-selection of  an option that came invalidated by out of stock.,We decided to avoid showing that option if the variant is out of stock and has a deny policy.,iOS Developer
+52931,Distll,(1) [1] Add entry point for purchase flow from product detail screen.,,iOS Developer
+52931,Distll,(1) [4] Create User model,,Backend Developer
+52931,Distll,(4h) [4] Ship to Form,Allow the user to enter a new shipping address.Save that address in the backend.Choose that address as the shipping one for this buying flow.,iOS Developer
+52931,Distll,(1) [4] Create dummy login,,Backend Developer
+52931,Distll,(4h) Shipping address list,Allows the user to select an already created shipping address.,iOS Developer
+52931,Distll,(1) [2] Api backend to add http header with the harcoded token,,Backend Developer
+52931,Distll,(1) [2] Create registration endpoint on api-backend,,Backend Developer
+52931,Distll,(4h) [3] Communication with backend and show the according screen,Fetch all the available shipping addresses.Show the form if the user does not have any shipping address,iOS Developer
+52931,Distll,(10) [10]New Payment method screen (Card number and billing address),"Let the user enter the credit card number, expiration date and secret code.Let the user select the shipping address as billing address.Show the user a form to create a new billing address.Save new payment method in backend and Stripe.Show errors.",iOS Developer
+52931,Distll,(0.5) Add paymentcustomer_id to User model,,Backend Developer
+52931,Distll,(3) [8] ecommerce - Create endpoint to create user card.,We will receive card token and associate card token to user:python code: customer = stripe.Customer.retrieve({CUSTOMER_ID})customer.sources.create(source={TOKEN_ID}),Backend Developer
+52931,Distll,(2) [7] ecommerce - Create Stripe customer if paymentcustomer_id is not set,"Define what to save in metadata field (user_id, username, ??)",Backend Developer
+52931,Distll,(3) [5h] ecommerce - Create endpoint to retrieve all card from Stripe for a user,,Backend Developer
+52931,Distll,(1) [4] api - Create endpoint to retrieve all card from Stripe for a user,,Backend Developer
+52931,Distll,(1) [3] api - Create endpoint to create user card. It receives card token.,,Backend Developer
+52931,Distll,(6h) Saved payment method list,,iOS Developer
+52931,Distll,(2h) Error handling,,iOS Developer
+52931,Distll,(4h) [4] Error handling,,iOS Developer
+52931,Distll,(2h) Get shipping service options from backend,,iOS Developer
+52931,Distll,(6h) Show the list of carrier options,Show all the carrier options and let the user select the one he wants.We need to agree on a default value.,iOS Developer
+52931,Distll,(4){0.25} Fix The issue,"To fix this issue properly, we would need backend integration. The backend should store a dictionary that contains offending unicode characters and their viable replacements.  The frontend can then cache this dictionary and use it to find and replace offensive unicode characters i.e. ones like Unicode character              Oct    Dec    Hex    HTML・ katakana middle dot         030373 12539 0x30FB &#12539",iOS Developer
+52931,Distll,(2h) Check quantity,"Each variant will now came with a integer that state the remaining stock available.Use cases:- If this property is -1 then that means that the user CAN buy any amount of items.- If this property is => 1, that means that the user can buy that max amount of items for that variant.We can relay in this new property to now the available stock for the variant. Please take into account the refactor of this functionality.NOTE: This property is not yet deployed ask back-enders when this if gonna to be deployed.",iOS Developer
+52931,Distll,"(6h) [6] Create ""review order"" screen layout",The server call and the debouce is not in the scope of this task. That's in other tasks.,iOS Developer
+52931,Distll,(2h) Transition to order summary,,iOS Developer
+52931,Distll,"(3) [16h] Use gunicorn to run distll-core, ecommerce, etc",,Backend Developer
+52931,Distll,(3) [8] Add error handling for sqlalchemy operations,,Backend Developer
+52931,Distll,(2) [8] Add filter validation,,Backend Developer
+52931,Distll,(2h) Transition to the next flow step,,iOS Developer
+52931,Distll,(1h) Transition to the next flow step,,iOS Developer
+52931,Distll,[6] Setup Testing Partner and Brand apart from Beautiful Losers,,Backend Developer
+52931,Distll,[Spike] [9h] - Research about Shopify Orders and Fulfillments,,Backend Developer
+52931,Distll,Release notes Backend,,Backend Developer
+52931,Distll,(1) [1] Release Backlog IOS,,iOS Developer
+52931,Distll,(2) [2] Interface buttons in the product gallery screen mix with the background,Steps:-Enter the app.-Enter to an article and click the shop button,iOS Developer
+52931,Distll,(1) {possible duplicate}The line header indicator does not change from Electronic to Alt section,Steps:-Enter the app-Go to the Discover section-Move the line header indicator from Electronic section to Alt sectionThe same happens when you move the line header indicatorfrom Surfing section to All categories sectionWE might be missing a use case when the user use the drag and drop or swipe gesture in the header section selector. There is some cases where the section is not been changed do we are checking if we are not already on the new selected section. We might need to remove this and find a way to not call refresh of section service call in the process.,iOS Developer
+52931,Distll,(0.25)[0.25] Article view crash in the discover section when the image is not already loaded,"Steps:-Enter the app-In the Discover section, try to view an article when the image its doesnt already loadedPlease test it and find out if it still reproduces.This it might been already fixed by refactors of logic. It might has to do with how we pass the url of an image into a cell in Discovery screen. And how this image is passed to the Fullscreen Article view. Passing nil of that image can be the issue here. Need more debug.",iOS Developer
+52931,Distll,(1) The line header indicator does not always change to the current selected section,Steps:-Enter the app-Go to the Discover section-Move the line header indicator from video games section to all categories sectionThis may be duplicated,iOS Developer
+52931,Distll,(1p) [12] Setup new sources for Beutiful Losers,,Backend Developer
+52931,Distll,(3p) [8] [ecommerce] Add RAML module for documentation,-Add raml integration-Update ecommerce endpoints documentation,Backend Developer
+52931,Distll,Copy .env file when setting up ingestion engine with Ansible,,Backend Developer
+52931,Distll,(0.5) Make Ingestion worker listen to a different queue,,Backend Developer
+52931,Distll,Fix last four card digits,The server response is wrongly parsed. The last 4 digits are assigned to the country field instead of the correct one.,iOS Developer
+52931,Distll,Update error messages when the user tries to create two equal addresses,"Fix other error messages if neccesary,",Backend Developer
+52931,Distll,Add Move To Previous Steps Actions,,iOS Developer
+52931,Distll,Create UI,,iOS Developer

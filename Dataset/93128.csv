@@ -1,0 +1,125 @@
+ProjectId,ProjectName,Title,Description,Role
+93128,UXBOX,[Front]: Layers & Canvas rendering foundation.,,Product Owner
+93128,UXBOX,[Front]: Internationalization foundation.,,Product Owner
+93128,UXBOX,[Front]: Filter and sort projects (in the dashboard projects page).,,Dev
+93128,UXBOX,[Front]: Delete project,,Dev
+93128,UXBOX,[Front]: State management foundation.,,Product Owner
+93128,UXBOX,[Front]: Basic navigation and project structure.,,Product Owner
+93128,UXBOX,[Front]: Library: colors collection section.,,Product Owner
+93128,UXBOX,[Front]: Library: icons collection (builtin).,,Product Owner
+93128,UXBOX,[Design]: Layouts and grouping foundation.,,Product Owner
+93128,UXBOX,[Design]: Document history foundation.,"The user has to be allowed to check and navigate through all the document versions automatically generated.This history will be shown as a tooltip. Each listed element will be the date and the hour of the document version.The user could mark with a ""pin"" or checkpoint the document version of its choice and go back to it at any moment.This ""pins"" will be shown as a list in a different section of the history tooltip.The ""pins"" could be renamed and deleted by the user.The whole document history will be kept in groups to save disc space at the BBDD.UX: https://github.com/uxbox/ux/blob/master/src/drawing-tools/document-history.pdf",Product Owner
+93128,UXBOX,[Front]: Groups and grouped shapes rendering foundation.,,Product Owner
+93128,UXBOX,[Front]: Basic keyboard actions on selected shapes.,"That implies:- Move selected shape using keyboard for precision postion management.- Remove the selected shape/shapes using SUPR key.- ~~Copy/Cut/Paste selected shape using Ctrl+c, Ctrl-x and Ctrl+v.~~",Product Owner
+93128,UXBOX,[Design]: Clipboard management.,Would be awesome to have:- Some toolbox (project/page independent) when will appear all objects that the user copy/cut.- That toolbox would be awesome that it will be able to handle multiple objects. The user should will be able copy one object in some time and copy other object and other time and the clipboard will conserve the both objects.- The user should be able select that object of the clipboard want to paste in the current workspace.- The clipboard surelly should be limited to 5 reasobable number of elements and surelly behave like a circular stack.More ideas are welcome.UX: https://github.com/uxbox/ux/blob/7e7cc7ddf1826d102ec3ca29251b4b6c78a68238/src/drawing-tools/clipboard-management.pdf,Product Owner
+93128,UXBOX,[Front]: Clip board management.,This depends on #16,Product Owner
+93128,UXBOX,[Front]: Most used colors widget.,Notes:- Should visualize the most used 5 colors in the current page/project.- It can be easily calculated analyzing all shapes and extract the most used colors.,Product Owner
+93128,UXBOX,[Layout]:  Color picker on library for color creation/modification.,,Product Owner
+93128,UXBOX,[Front]: Color picker on library for color creation/modification.,,Product Owner
+93128,UXBOX,[Layout]: Color picker on shape options.,,Product Owner
+93128,UXBOX,[Front]: Color picker on shape options.,,Product Owner
+93128,UXBOX,[Front]: Color palette on workspace (simple version).,,Product Owner
+93128,UXBOX,[Front]: refactor lenses naming,,Product Owner
+93128,UXBOX,[Front]: refactor rum usage (just for mixings and helpers location),,Product Owner
+93128,UXBOX,[Layout]: Shape resize controls (improvement).,Location: uxbox/ui/workspace/selrect.cljs: shape-render function.,Product Owner
+93128,UXBOX,[Front]: Slider animation on colorpalette.,"When close: add to "".color-palette"" the class "".fade-out-down"" to create the close animation.",Dev
+93128,UXBOX,[Front]: Stroke color change with colorpalette (using shift meta key).,,Product Owner
+93128,UXBOX,[Front]: Improved element options for icon/line/rect/circle.,,Product Owner
+93128,UXBOX,[Front]: Draw line shape.,,Product Owner
+93128,UXBOX,[Front]: Draw circle shape.,,Product Owner
+93128,UXBOX,[Front]: Draw text shape.,"The missing:- A list of values for `font-family` http://www.w3schools.com/cssref/css_websafe_fonts.asp- A list of values for `font-weight` These values depend of the font. Basically they are normal, italic, bold, black and light.- A layot and icons for text alignment- Fix the style of element options for text element.",Product Owner
+93128,UXBOX,[Front]: Basic interaction of layers toolbox.,"There are 3 css classes for the Drag & Drop interaction to apply to ""element-list-body"":- drag-top (move a shape/group above another shape/group)- drag-bottom (move a shape/group below another shape/group)- drag-inside (put a shape/group inside an existing group)UX: https://github.com/uxbox/ux/blob/master/src/drawing-tools/layers-groups.pdf",Product Owner
+93128,UXBOX,[Layout] See layers/groups like a tree in the layers toolbox.,"At this moment, the layers toolbox shows groups and groups inside groups all at the same level, ant it makes a lot of confusion. Would be awesome see some nesting for items and groups inside of other groups.",Product Owner
+93128,UXBOX,[Front]: Color picker improvement,- fix element options color picker img- add RGB input- add color picker current marker label- Black or White? bugExamplehttp://www.daviddurman.com/flexi-color-picker/#,Product Owner
+93128,UXBOX,[Epic*]: Backend foundation,,Product Owner
+93128,UXBOX,[Epic*]: Interactions,UX: https://github.com/uxbox/ux/blob/master/src/interaction/interaction.pdfNotes:- This library can be used in order to make interactions in the view app: https://github.com/juliangarnier/anime,Product Owner
+93128,UXBOX,Dynamic alignment,"Consists in alignment with other shapes instead of grid.Technical details:- Use two interval trees, one for vertical other for horizontal ponts of reference (already implemented).- Initialize the tree in the worker app on workspace is loaded.",Product Owner
+93128,UXBOX,Export project as zip with svg's,"The US consists in:- The user should be able to download a bundle with raw rendered SVG's of selected page.- The user should be able to download one unique raw SVG of the selected page (see the save button on view application).UI consists mainly in uxbox on workspace with:- a couple or three radio buttons allowing the user select the kind of export (the current page, zip file with raw svgs, a navigable with statically generated htmls, an interactive application with animations and transitions) (this US consists only to implement the zip file export).- a some kind multiselect where the user can select the pages (this is only be visible if no ""current page"" is selected from previous point).Technical details: consists in statically render all the pages svgs and put them in one zip the [jszip](https://stuk.github.io/jszip/) can be used to create the zip file in the frontend.Technical notes:- The same business logic should be used for save the selected page as raw svg (without the need to zip packaging).",Product Owner
+93128,UXBOX,[Layout]: Create elements,,Product Owner
+93128,UXBOX,[Front]: Grid settings,,Product Owner
+93128,UXBOX,[Design]: Grid settings,,Product Owner
+93128,UXBOX,[Front]: Ruler tool,,Product Owner
+93128,UXBOX,[Layout]: Loaders & transitions,"For the full page loader (transitions between dashboard and projects etc...)This loader go centered in a full white bg page or lightboxhttp://codepen.io/elhombretecla/full/ZWvrqr/For the mircointeraction loader (save action, load small stuff, etc...)",Product Owner
+93128,UXBOX,[Design]: Pages CRUD lightbox,"This lighbox is the same as the create project lightbox. It will be appear clicking on the ""+ Add page"" button.It allows the user to create a new page with any size. By default it will be filled by the current page size data but it could be changed by the user to any size.This lightbox appears at Create & Edit functions.![Your alternative text to picture here...](https://media.taiga.io/attachments/6/6/1/f/a45b828a0a7e8f75dc0e2b8a4d125efe7168ed2a1098dfea4bc42b5e97cf/301-add-page.png """")",Product Owner
+93128,UXBOX,[Front]: Draw rect shape,,Product Owner
+93128,UXBOX,"[Layout]: ""Organize"" toolbox on workspace.",-,Product Owner
+93128,UXBOX,[Design] Favicon.,"Here is the favicon img to use at the <head>![Your alternative text to picture here...](https://media.taiga.io/attachments/b/a/3/2/831c48db60429c07a9d4134c488d0bf91e3b634be117190f1be4db6fc283/favicon.png """")",Product Owner
+93128,UXBOX,[Design]: Project main web page.,"Create a very first version of the UXBOX web page that will be operative till August. Its objective is to communicate the basic UXBOX features and to keep the user informed about all the development workaround.Later in time, when we are in beta, this web page will be completed with more sections and functions:- Features- Pricing- Explore- Blog- Enterprise- Login- Sign up",Product Owner
+93128,UXBOX,[Sysops]: Add docker development environment.,,Product Owner
+93128,UXBOX,[Front]: Generic confirmation lightbox.,Just a simple lightbox that ask for ok/cancel.The placeholder template is on `uxbox/ui/confirm.cljs` and you can open it just clicking on `image` boton on workspace.,Product Owner
+93128,UXBOX,[Bug]: Recent colors does not works with rects and (maybe with other shapes).,,Product Owner
+93128,UXBOX,[Bug]: Svg render on layers toobox should always be in the same tone (without colors).,This only affects to icon rendering because the rest of shapes are rendered statically using an icon.,Product Owner
+93128,UXBOX,[Bug]: The selrect should not select groups and its children when group is blocked.,- It should select only a group and not it childs if the group is blocked.- It should selects only childs and not the group if group is not blocked.,Dev
+93128,UXBOX,[Bug] The layers toolbox elements order should be inverted.,,Product Owner
+93128,UXBOX,[Front]: Basic support for path.,,Product Owner
+93128,UXBOX,[Front]: Move faster the shapes with direction keys when shift is pressed.,,Product Owner
+93128,UXBOX,[Front]: Ruler improvements,file: workspace/canvas/ruler.cljs,Product Owner
+93128,UXBOX,[Front] Duplicate shape (in layers toolbox and in canvas) can be done using Ctrl+D shortcut.,,Product Owner
+93128,UXBOX,"[Front]: Imanted mode (with Ctrl) for circle, rect.",The line should be omited because it will be refactored into polyline.,Product Owner
+93128,UXBOX,"[Front]: Change multiselect key to ""Shift""",,Product Owner
+93128,UXBOX,[Design] Redesign new element options,"The UI needs to be redesigned because of the element options popup are not enough worth.Redistribute all the options and tools between 2 zones:- Left UI zone: It will show all the ""organization"" tools of the project like sitemap, layers and document history.- Right UI zone: It will show all the shape modifiers tools like size, position, color, text, icons, element (widgets)...![Your alternative text to picture here...](https://media.taiga.io/attachments/6/8/7/3/c285ef8d5a0fb646bfa614d4aa0965abe077574dfa03aaabbc2ffaa480e1/100-new-ui.png """")",Product Owner
+93128,UXBOX,[layout] Messages styles,- Platform messages   .Error   .Info   .Warning- Login error message,Product Owner
+93128,UXBOX,[layout] input type messages styles,,Product Owner
+93128,UXBOX,[Front] Shape stroke definition,"We will have 5 preset options for the stroke style:- None (transparent, width 0)- Solid- Dotted (stroke-dasharray=""1, 5"")- Dashed (stroke-dasharray=""5, 5"")- Mixed (stroke-dasharray=""5, 5, 1, 5"")",Product Owner
+93128,UXBOX,[Layout] Clip board management,,Product Owner
+93128,UXBOX,[Layout] Grid settings,,Product Owner
+93128,UXBOX,[Layout] User settings,"- Profile (avatar, name, etc...)- Password- Email notifications",Product Owner
+93128,UXBOX,[Back]: Projects CRUD,,Product Owner
+93128,UXBOX,[Back]: Pages CRUD,,Product Owner
+93128,UXBOX,[Front]: Projects CRUD integration.,,Product Owner
+93128,UXBOX,[Front]: Pages CRUD integration.,,Product Owner
+93128,UXBOX,[Back]: Profile crud.,,Product Owner
+93128,UXBOX,[Back]: Page Settings,,Product Owner
+93128,UXBOX,[Back]: File uploads foundation.,,Product Owner
+93128,UXBOX,[Back]: Import bitmap images to page/project.,,Product Owner
+93128,UXBOX,[Back] Password change endpoints.,,Dev
+93128,UXBOX,[Back] Upload profile photo.,"This needs to implement some image croping/resize mechanism. The implementation can be based on the already well tested django plugin `easy_thumbnails`. The javafx/awt can be used as backend for implement that in clojure, here some links:- https://docs.oracle.com/javase/8/docs/api/javax/imageio/ImageIO.html#read-java.io.InputStream-- https://docs.oracle.com/javase/8/docs/api/java/awt/image/BufferedImage.html- https://docs.oracle.com/javase/8/docs/api/java/awt/Image.html#getScaledInstance-int-int-int-- http://stackoverflow.com/questions/5186597/how-crop-some-region-of-image-in-javaThe easy_thumbnails related code is here:- https://github.com/SmileyChris/easy-thumbnails/blob/master/easy_thumbnails/processors.py",Product Owner
+93128,UXBOX,[Front]: Password change form (profile settings),Depends on #110,Dev
+93128,UXBOX,[Layout] [Front] Edit project (mainly edit its name).,,Product Owner
+93128,UXBOX,Review messages and version lightbox design,,Product Owner
+93128,UXBOX,Review user settings design,"The current user settings sub menu is not fine enough. Also, the dashboard's nav makes no sense in this screen.Solution: Replace the dashboard's nav instead of the user settings sub menu adding a ""back to dashboard"" arrow icon.![Your alternative text to picture here...](https://media.taiga.io/attachments/a/3/8/6/6d698bd42ad38038cfee52d07113a8e87f7902276902d9201c1712ef31f2/user-settings.png """")",Product Owner
+93128,UXBOX,Rethink color theme selection,Problem: Now we have to create the entire CSS twice. This is a big amount of duplicated code and is useless.,Product Owner
+93128,UXBOX,Integrate the page counter numbers in project list (dashboard),"NOTE: It requires changes in backend code for expose the appropriate counter and later integrate that in frontend.At this moment, in the dashboard card always shows `0` as the page number. It should return the real page number. It is should be exposed in back as readonly property an later integrate in front.",Dev
+93128,UXBOX,[front]: Backend integration of color collections.,"The color collections (library) integrate them with backend.May require back skills for fix the posible bugs on the first implementation.Impl details:- The collection will be stored as is, no items entity exists in the backend just collections. The set of colors should be serialized in backend using transit (in the same way as it done with pages (no shape entity in the backend)).",Dev
+93128,UXBOX,Add horizontal resize handlers to shape.,At this moment we have only corner handlers for resize. Would be nice have also the horizontal handlers.,Dev
+93128,UXBOX,Shape alignment with grid.,,Product Owner
+93128,UXBOX,Allow draw multiple rectangles in batch,"At this moment you should constantly switch from drawing to sidebar for draw every rectangle (circle, etc...)",Dev
+93128,UXBOX,Zoom in workspace.,,Dev
+93128,UXBOX,[Front]: The ability to resize multiple selection.,,Product Owner
+93128,UXBOX,[Front]: Shapes organization handlers.,"Add the implementation for organization handlers (move top, move bottom, ... buttons on the layers sidebar.",Dev
+93128,UXBOX,New look to color picker,"The implementation of current color picker is good but it looks very ugly in some circumstances or simply insufficient. Would be awesome have a look an feel similar to gravit.io or chrome dev tols.--------------------------------------------------------------------------**USAGE**The color-picker will be used at fill/stroke element options, grid color and create color (color library)STEP 1At first instance, the user needs to click on the color-picker thumbnail to show the color-picker lightbox where the color will be selected.![Your alternative text to picture here...](https://media.taiga.io/attachments/8/8/b/6/3046fd6910b79cd30666a43902b343ce254c306207a7b5b31b4e32ab2243/color-picket-th.png """")STEP 2When the color-picker is opened, the user could select the color of its choice from the color-picker area, the hexadecimal input, the RGB input, the recent colors or picking a color from the workspace whith the picker tool.![Your alternative text to picture here...](https://media.taiga.io/attachments/6/f/6/d/0ef6faff7331a55a7b8c436a2a219162cc19e9b2b5f8032bd7a3388748c9/color-picker.png """")RESULTAs result, the fill/stroke and grid color will change to the selected color.SPECIAL CASESWhen the user wants to create a new color from the color library at the dashboard, the create color lightbox will be opened. There only appears the simple color picker (without the STEP 1 color-picker thumbnail.![Your alternative text to picture here...](https://media.taiga.io/attachments/3/7/9/f/9fc3eedc81d809beb719884eae91b5a7c7c17aa32c1a88cba357b42c643c/new-color.png """")![Your alternative text to picture here...](https://media.taiga.io/attachments/0/d/f/a/8aabb356421af47fdb9c6b422a85ce8a817a8fc17ec0a3db05db5845ca61/grid-settings.png """")",Product Owner
+93128,UXBOX,Send pages data in serialized format,,Product Owner
+93128,UXBOX,[Back]: compress the page data instead storing it as plain text.,,Product Owner
+93128,UXBOX,[Front]: Cryptographically secure uuid v4 generation,"At this moment the `(random-uuid)` is used that uses `Math.random`. That is know by its poor entropy. A better approach should be used for generate uuids.https://github.com/broofa/node-uuid/blob/master/uuid.js has good impl, using better RNG (if it is available). The solution can be just port that to google closure compiler format (in the same way as kdtree is done) removing anything nodejs related stuff because we are working only for browser. Maybe release as a library.",Product Owner
+93128,UXBOX,[UX] import bipmap images (library and workspace),,Product Owner
+93128,UXBOX,[Back]: Delayed objects deletion.,"This feature will prevent us of doing hard work on restoring a deleted project by accident by our users. Having delayed proyects deletion will give us some time window the ability to restore the project and also gives the ability to the user have temporal ""undo"" button ""a la gmail"" for the project deletion.Implementation details:- create an additional field for store the exact moment of the deletion action.- create a field that marks the project as deleted.- remove deleted projects from queries.",Product Owner
+93128,UXBOX,[Back]: Email sending foundation.,,Product Owner
+93128,UXBOX,[Back]: Transaction log watching foundation.,,Product Owner
+93128,UXBOX,[Back]: Scheduled jobs foundation.,,Product Owner
+93128,UXBOX,[Layout] Email template,,Product Owner
+93128,UXBOX,[Back]: thumbnail and croping foundation.,,Product Owner
+93128,UXBOX,[Front] z-index shapes size handlers,Now the size handlers of a shape not appear at the front of every shape. If you have selected one shape below other shape its handlers are showed below the shape too making it not selectable.We need these controllers working like with z-index top level parameter.,Dev
+93128,UXBOX,[Front] [Bug] Doesn't show correctly the icons when there are a lot,If you see material design collections the bigger one have a lot of icons over the top of the scrollable content.,Product Owner
+93128,UXBOX,[Layout] Import bitmap lightbox and library,"I've done all the layout work at the branch ""upload-img-lightbox"". You can view the lightbox by click on the ""new element"" button.I leave the first step lightbox and the element lightbox marked by comments. To make them visible only remove these comments.",Product Owner
+93128,UXBOX,[Front]: Register user.,,Product Owner
+93128,UXBOX,[Back]: Import/Export foundation api,,Product Owner
+93128,UXBOX,Organize pages using drag&drop (on workspace sitemap widget).,Project pages list needs to has drag&drop implemented to organize them and change its order,Dev
+93128,UXBOX,Revisit the usability of sitemap.,The current approach makes the drag and drop very error prone and it should be revisited.,Dev
+93128,UXBOX,Fix mouse/pointer handling on colorpicker,"It consists in:- removing the animations on the svg, that dificults a lot the color selection- increase the white border and pointer handling for more easy select border collections- convert to inputs the color labels on element options.",Dev
+93128,UXBOX,Add the ability to edit page name on page element option sidebar.,,Product Owner
+93128,UXBOX,User testing,"TEST DESCRIPTIONThe user has to create a mobile app interactive prototype with 2 pages: Home and a secondary page.As a result, he/she has to give a link to the prototype.It has to test:- Create a new project- Manage pages- Interactions- Measures- Manage layers and groups- Import images or icons- Manage and use the grid- Manage and use the dashboard",Product Owner
+93128,UXBOX,Add tooltip to pointer in some cases,,Dev
+93128,UXBOX,Implement page persistence as a scheduled task.,"Right now, the page persistence is just a throttled queue. This approach causes in some circumstances when the save operation is a little bit slower that in normal situations an other save operation is sent to the server before have received the previous response. This race condition will cause conflict on the last save because it does not comes with the latest version number.The persistece of page should be done as a scheduled task in order to completly prevent this kind of race conditions.Also, there are should be a way to pause a posible persistence for some time (while some action is performed by the user).",Product Owner
+93128,UXBOX,Add better interpreter and builder for path shape,This is important to to finish before public use.,Product Owner
+93128,UXBOX,Supr/Backspace,,Product Owner
+93128,UXBOX,Esc,,Product Owner
+93128,UXBOX,Move,,Product Owner
+93128,UXBOX,Integrate stroke element options,,Product Owner
+93128,UXBOX,Fix styles/layout of stroke element options,Border radius is an option of the rect shape ONLY. It consider the RX axis and the RY axis so we only need 2 inputs instead of 4.,Product Owner
+93128,UXBOX,Fix layout related to border-radius (blocking for finish this US).,,Product Owner
+93128,UXBOX,Refactor the current approach for initial drawing of shapes (the simple shapes will require more flexibility),,Product Owner
+93128,UXBOX,Label current selection,,Product Owner
+93128,UXBOX,Fix element options picker img.,,Product Owner
+93128,UXBOX,Style improvements,,Product Owner
+93128,UXBOX,Implement IntervalTree data structure.,,Product Owner
+93128,UXBOX,Implementation of portation API.,,Product Owner

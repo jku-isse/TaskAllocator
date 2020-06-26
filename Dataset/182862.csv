@@ -1,0 +1,53 @@
+ProjectId,ProjectName,Title,Description,Role
+182862,Admin WebApp,Approval cycle - User Stories and Permissions (Requirement Study),,Backend
+182862,Admin WebApp,FB post in React JS for Hook,,Frontend
+182862,Admin WebApp,Movie Website - Content Integration,,Frontend
+182862,Admin WebApp,Featured and Junk Services for Fanclub feeds & Comments and  Challenges,Usermanageent issues (4) to be resolved,Backend
+182862,Admin WebApp,Working on Hook - Frontend,,Frontend
+182862,Admin WebApp,Tumblr API,,Frontend
+182862,Admin WebApp,Create Data Item fine tuning after functionality and also Content Curation fine Tunning,,Frontend
+182862,Admin WebApp,Edit Create Data,,Frontend
+182862,Admin WebApp,Content Curation - Deletion of Junk Fanclubs,,Backend
+182862,Admin WebApp,Scheduled Notifications issue resolving,,Backend
+182862,Admin WebApp,In Content Curation challenge Module Wall Post UI is changed i need to work on that,,Frontend
+182862,Admin WebApp,"Unfeaturing of Fanclubs for MC, Fanclubs and Fanclub Feeds",,Backend
+182862,Admin WebApp,Ux suggested Changes in Edit Meta Data I Need To work on that Edit Meta Data Ui Finetunning,,Frontend
+182862,Admin WebApp,UI changes in Content Curation and fine Tunning For Delete junk Files And Featured Posts,,Frontend
+182862,Admin WebApp,Facebook Domain verification,"Facebook feed post with link url , customized description",Frontend
+182862,Admin WebApp,"Changing the coins earned report service,fanclubs default report service,coins redeemed report service",,Backend
+182862,Admin WebApp,Updating the roles and permissions for each role and changing the user schema,,Backend
+182862,Admin WebApp,Changing the coupons redeemed report userwise service,,Backend
+182862,Admin WebApp,Facebook post  image URL unblock,FB feed post image url,Frontend
+182862,Admin WebApp,New Image URL with new domain and image name encryption,,Frontend
+182862,Admin WebApp,FB developer user_photos permission,,Frontend
+182862,Admin WebApp,Twitter API Dev app tokens with Oauth,Started twitter API enhancements,Frontend
+182862,Admin WebApp,Creating a new schema for storing messages of approval cycle and implementing services for storing messages and one for displaying users list and one for storing profile image of user,,Backend
+182862,Admin WebApp,Service for displaying the messages in approval cycle dashboard,,Backend
+182862,Admin WebApp,FB Hook html view to image(.jpg) conversion sample script,"sample code implementation done, given coed to web development.",Frontend
+182862,Admin WebApp,Facebook user_photos permission,user_photos permission docs and files preparation and submitting to approval review.*   Android .apk files*   IOS similator build with FB support conversion files*   Functionality video process files.*   Description of functionality flow with testing process info All above files are prepared and  uploaded to FB review,Frontend
+182862,Admin WebApp,im working on create Polling UI Enhancements,,Frontend
+182862,Admin WebApp,Service for storing comments in each message thread in db,,Backend
+182862,Admin WebApp,Manikarnika FB developer App,"Manikarnika FB developer app with test users, access-token,services creation",Frontend
+182862,Admin WebApp,Changing the approval cycle messaged schema and updating the services in accordingly,,Backend
+182862,Admin WebApp,Polling Dashboard,,Frontend
+182862,Admin WebApp,Polling Winners Declared,,Frontend
+182862,Admin WebApp,Polling View Details,,Frontend
+182862,Admin WebApp,Service for getting a pack approved and service for changing a message from unread to read status,,Backend
+182862,Admin WebApp,Service for displaying only read messages and service for displaying unread messages,,Backend
+182862,Admin WebApp,Twitter GET All Tweets and Post Tweet with Oauth 0.1,Twitter GET All Tweets and text post tweet with Oauth 0.1,Frontend
+182862,Admin WebApp,Service for displaying sent messages,,Backend
+182862,Admin WebApp,Service for showing all messages in a particular message thread,,Backend
+182862,Admin WebApp,Manikarnika Facebook login Kit for android,Facebook login kit settings with exception handling of access,Frontend
+182862,Admin WebApp,Service for showing reviews count and service for showing notification count,,Backend
+182862,Admin WebApp,Worked on content curation issue,,Backend
+182862,Admin WebApp,Changed the coupons redeemed userwise report service,,Backend
+182862,Admin WebApp,im working on polling dash boards,,Frontend
+182862,Admin WebApp,im working on create polling fine tunning,,Frontend
+182862,Admin WebApp,Services for create and display of social media posts,,Backend
+182862,Admin WebApp,Create functionality of social media posts in front-end,,Backend
+182862,Admin WebApp,Display functionality of posts,,Backend
+182862,Admin WebApp,"Facebook Tokens ,share and reshare KT to middleware and web",,Frontend
+182862,Admin WebApp,FB user long live token issue enhancement and fixing,,Frontend
+182862,Admin WebApp,"Facebook Graph API entaire KT to Karthik, Amar and Roop",,Frontend
+182862,Admin WebApp,Twitter Required API calls for Web social media functionality,,Frontend
+182862,Admin WebApp,"Facebook Reshare enhancement and API calls , UI parameters Guide to Web, support Android and web",,Frontend

@@ -1,0 +1,3 @@
+#if ($label)
+    <span style="font-weight: bold; color: red;">Predicted Role: $label</span>
+#end

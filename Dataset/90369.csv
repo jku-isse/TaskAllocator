@@ -1,0 +1,69 @@
+ProjectId,ProjectName,Title,Description,Role
+90369,Eazycom,Template : Social links in ody,"There should be option to include to social links to mails. We should get the social ID for different mediums such as facebook , twitter and google plus.",Stakeholder
+90369,Eazycom,Rule Based Image Integration (Front End Page),,Developer
+90369,Eazycom,Service - Open service to update and add,We should have service which can used by the external user to add /update the data which is inside our database. For this we should have some kind of security key which is to be used for each service.,Developer
+90369,Eazycom,Tooltip in Dynamic Image block in template page.,Add tool-tip in dynamic image block of template page. Tool-tip should show the name of the dynamic image.,Developer
+90369,Eazycom,Tempalte Draggable blocks page alignment,Align the drag-able components in template page.,Developer
+90369,Eazycom,Service Integration Page - Front End HTML Design and validation(Basic and Service).,,Developer
+90369,Eazycom,logging framework design,log table on quartz schedule side.Logging should be based on each run.,Stakeholder
+90369,Eazycom,Soft delete template and sub list pages only (Coding),Use design which is completed in task #179,Developer
+90369,Eazycom,Drip Campaign - FE Coding,,Developer
+90369,Eazycom,Service Integration Page - Front End  JSON Object Designs and JS controller,,Developer
+90369,Eazycom,In smartimage page show default image in upload image box,In smartimage page show default image in upload image box instead if showing nothing.,Developer
+90369,Eazycom,Drip Campaign - FE page to show list of campaign,1. Existing campaign get call changes.2. List of campaign pages.3. Start FE changes.,Developer
+90369,Eazycom,JUnit issues fixing,More then 19 JUnit test cases are failing that has to be fixed.  We should maintain 0 failures in JUnit at any point in time.,Stakeholder
+90369,Eazycom,Time not get selected automatically in smart image page,Time not get selected automatically in smart image page while choosing time field and providing value.Currently default time for time field shows 00:00 but it should show 00:00:00,Developer
+90369,Eazycom,serviceIntegration for Inserting bulk SubscriberData,,Developer
+90369,Eazycom,Redesign,This required a redesign,Stakeholder
+90369,Eazycom,Coding,feature Enhancement,Stakeholder
+90369,Eazycom,Testing,,Stakeholder
+90369,Eazycom,Junit and testing,Junit and testing,Developer
+90369,Eazycom,Analysis,Analysis for best design solution,Developer
+90369,Eazycom,Coding,Coding,Developer
+90369,Eazycom,Testing,,Stakeholder
+90369,Eazycom,Coding,,Developer
+90369,Eazycom,Junit,Junit,Developer
+90369,Eazycom,Testing,,Developer
+90369,Eazycom,Remove communication settings from campaign flow / state,It will get implemented along with campaign revamp task,Developer
+90369,Eazycom,Session timeout redirect to Login Page,,Developer
+90369,Eazycom,Analyse/design,Posted the question in Stack overflow - http://stackoverflow.com/questions/34498189/mongodb-find-filter-data-by-month,Stakeholder
+90369,Eazycom,Coding,,Stakeholder
+90369,Eazycom,Testing,,Stakeholder
+90369,Eazycom,design,design table creation,Stakeholder
+90369,Eazycom,front end screen coding,,Developer
+90369,Eazycom,testing,,Stakeholder
+90369,Eazycom,Coding,,Developer
+90369,Eazycom,Junit and Testing,,Developer
+90369,Eazycom,Testing,"Generate Key panel alignment ,  page alignment (if page size increase)if Expiry date for an active key is less then the Expiry date for an deleted key - invalid message(""Api Key has been Expired / Deleted..! Please Generate New Key."" )At any cost use should have only one active keyEven the key expired we should show the latest key which got expiredDeleted records should not be considered for any validation/as expired",Developer
+90369,Eazycom,coding,,Developer
+90369,Eazycom,backend,SocialMediaSetting and UserSocialMediaMap Table Created.In UserSocialMediaMap mapped with AppUser(User-Id) and SocialMediaSetting(Setting_Id)..,Product Owner
+90369,Eazycom,design,,Stakeholder
+90369,Eazycom,Design,,Developer
+90369,Eazycom,coding,,Developer
+90369,Eazycom,Test,,Developer
+90369,Eazycom,design,,Stakeholder
+90369,Eazycom,coding,,Developer
+90369,Eazycom,tasklist,"Error Handling				Tracking report -If Report not available,  don't show the graph details	done		For new users		Tracking report	-showing create new campaign page with title as Campaign			Schedule report	-If schedule is not running don't show titles / redirect to error page			Template	-Default template count should not get added in dash board		Remove description on table and make it as mouse hover			Dash board	=More info link not redirecting to any where.		-Main Menu	-Milano client logo on left corner		change sign-out icon	All pages select button	change glypicon as “glyphicon glyphicon-ok”			Sublist menu -it should have two sub menus – Meta data , data			column editor	-Message is showing in yellow color it should be uniform with other pages			Template	-mouse hover on icons changed to white color – have to change			campaign	-message color should be uniform				Add glypicon before each task – for rule “glyphicon glyphicon-filter”, launch  - “glyphicon glyphicon-send”			Schedule	-Label before create button			campaign report	-campaign edit column should be hidded for track report page",Stakeholder
+90369,Eazycom,Junit,,Developer
+90369,Eazycom,Testing - Campaign-Flow - Communication setting,,Stakeholder
+90369,Eazycom,"Testing - API Key...Social Media..Change password. App user create, Edit update.",,Developer
+90369,Eazycom,Junit,,Developer
+90369,Eazycom,Template Page coding,,Developer
+90369,Eazycom,Testing,,Stakeholder
+90369,Eazycom,Test,1) Errors in No of rows (row count) < User provided limit (row count)    1)  allowed to upload.    2) rows contains errors are Skipped    3) can download error list as csv by given link.     4) No duplicate combination of row column name2) Errors in No of rows (row count) >= User provided limit (row count)    1)  Not-allowed to upload.    2) All rows  are Skipped    3) can download error list as csv by given link.    4) No duplicate combination of row column name.3) same for new upload -  bulk update- and re-upload,Developer
+90369,Eazycom,Coding,,Developer
+90369,Eazycom,testing,,Stakeholder
+90369,Eazycom,testing,,Stakeholder
+90369,Eazycom,Junit,,Developer
+90369,Eazycom,Testing,,Developer
+90369,Eazycom,test,"Test for toaster message panels in sublistcreation,template,schedular,createsocial media,commjnication settings,",Developer
+90369,Eazycom,Testing,,Developer
+90369,Eazycom,Coding - Campaign,,Developer
+90369,Eazycom,Coding,,Developer
+90369,Eazycom,Testing,,Developer
+90369,Eazycom,Junit for Campaign Soft Delete,,Developer
+90369,Eazycom,Testing -  Campaign Soft delete,,Developer
+90369,Eazycom,coding,,Developer
+90369,Eazycom,coding,,Developer
+90369,Eazycom,Menu auto hide if we click on any SideMenu,,Developer
+90369,Eazycom,coding to hide right side menu bar.. (invalid..)(duplicate : 323),wrongly added... bug no : 323...,Developer

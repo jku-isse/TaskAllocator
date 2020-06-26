@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<atlassian-plugin key="${atlassian.plugin.key}" name="${project.name}" plugins-version="2">
+  <plugin-info>
+    <description>${project.description}</description>
+    <version>${project.version}</version>
+    <vendor name="${project.organization.name}" url="${project.organization.url}"/>
+    <param name="plugin-icon">images/pluginIcon.png</param>
+    <param name="plugin-logo">images/pluginLogo.png</param>
+  </plugin-info>
+  <!-- add our i18n resource -->
+  <resource type="i18n" name="i18n" location="JIRA-TaskAllocator"/>
+  <!-- add our web resources -->
+  <web-resource key="JIRA-TaskAllocator-resources" name="JIRA-TaskAllocator Web Resources">
+    <dependency>com.atlassian.auiplugin:ajs</dependency>
+    <resource type="download" name="JIRA-TaskAllocator.css" location="/css/JIRA-TaskAllocator.css"/>
+    <resource type="download" name="JIRA-TaskAllocator.js" location="/js/JIRA-TaskAllocator.js"/>
+    <resource type="download" name="images/" location="/images"/>
+    <context>JIRA-TaskAllocator</context>
+  </web-resource>
+  <web-panel name="TaskAllocatorModName" i18n-name-key="task-allocator-mod.name" key="task-allocator-module-key" location="atl.jira.view.issue.right.context" weight="1000">
+    <description key="task-allocator-mod.description">The plugin provides dynamic recommendation of roles based on given user story, task or issue</description>
+    <context-provider class="com.example.plugins.role.TaskAllocator"/>
+    <resource name="view" type="velocity" location="templates/task-allocator.vm"/>
+    <label key="task-allocator.title"/>
+  </web-panel>
+</atlassian-plugin>
